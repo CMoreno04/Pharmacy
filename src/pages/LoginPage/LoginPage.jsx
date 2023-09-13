@@ -10,7 +10,9 @@ const LoginPage = () => {
   return (
     <main className="main-container flex-container align-center justify-center">
       <div className="login-form-container flex-container align-center flex-column">
-        <h1 className="login-h1">Sign in</h1>
+        <header className="login-header-container">
+          <h1 className="login-h1">Sign in</h1>
+        </header>
 
         <LoginForm />
 
