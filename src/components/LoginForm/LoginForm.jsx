@@ -1,5 +1,6 @@
 import React from "react";
 import { useFormik } from "formik";
+import { sendUserLoginData } from '../../services/authService';
 
 import * as Yup from "yup";
 
@@ -41,8 +42,17 @@ const LoginForm = () => {
   // Function for handling form submission
   const handleFormSubmit = async (values) => {
 
-    // Simple console log to show the form data (This is to be removed when the form is connected to the backend)
-    console.log(values);
+    // Send form data to backend
+    const { result, data, message } = await sendUserLoginData(values);
+
+    if (result === "success") {
+      console.log(`successful login, ${JSON.stringify(data)}`);
+      // TODO: Add code to log the user in
+    }
+    else {
+      console.log(`unsuccessful login, ${message}`);
+      // TODO: Add code to display error message
+    }
 
     // Reset form after submission (This is to be removed when the form is connected to the backend)
     formik.resetForm();
