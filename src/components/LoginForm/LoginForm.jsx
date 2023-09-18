@@ -1,6 +1,6 @@
 import React from "react";
 import { useFormik } from "formik";
-import { sendUserLoginData } from '../../services/authService';
+import { sendUserLoginData } from "../../services/authService";
 
 import * as Yup from "yup";
 
@@ -21,13 +21,15 @@ const defaultLoginData = {
 // Validation schema for formik
 const loginValidationSchema = Yup.object({
   email: Yup.string().required("Enter a valid email address."),
-  password: Yup.string().required("Enter a valid password."),
+  password: Yup.string()
+    .required("Enter a valid password.")
+    .min(1, "Password must be at least 1 character long")
+    .max(8, "Password can't be longer than 8 characters"),
 });
 
 // ---------------------------------------------------- LoginForm Component ---------------------------------------------------->
 
 const LoginForm = () => {
-  
   // Formik hook, for handling form state, validation and submission.
   const formik = useFormik({
     initialValues: defaultLoginData,
@@ -41,15 +43,13 @@ const LoginForm = () => {
 
   // Function for handling form submission
   const handleFormSubmit = async (values) => {
-
     // Send form data to backend
     const { result, data, message } = await sendUserLoginData(values);
 
     if (result === "success") {
       console.log(`successful login, ${JSON.stringify(data)}`);
       // TODO: Add code to log the user in
-    }
-    else {
+    } else {
       console.log(`unsuccessful login, ${message}`);
       // TODO: Add code to display error message
     }
