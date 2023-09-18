@@ -4,7 +4,9 @@ import "./register-page-styles.css";
 
 const RegisterPage = () => {
   return (
-    <p>Register Page</p>
+    <div className="register-page">
+      <p>Register Page</p>
+    </div>
   );
 };
 
