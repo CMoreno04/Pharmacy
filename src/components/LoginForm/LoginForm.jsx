@@ -21,10 +21,7 @@ const defaultLoginData = {
 // Validation schema for formik
 const loginValidationSchema = Yup.object({
   email: Yup.string().required("Enter a valid email address."),
-  password: Yup.string()
-    .required("Enter a valid password.")
-    .min(1, "Password must be at least 1 character long")
-    .max(8, "Password can't be longer than 8 characters"),
+  password: Yup.string().required("Enter a valid password."),
 });
 
 // ---------------------------------------------------- LoginForm Component ---------------------------------------------------->
