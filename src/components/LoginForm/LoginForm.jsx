@@ -5,7 +5,7 @@ import { sendUserLoginData } from "../../services/authService";
 import * as Yup from "yup";
 
 import FormField from "../shared-components/FormField/FormField";
-import FormButton from "../shared-components/FormButton/FormButton";
+import Button from "../shared-components/Button/Button";
 
 import "../../styles/flex-styles.css";
 import "./login-form-styles.css";
@@ -65,7 +65,6 @@ const LoginForm = () => {
         label="Email"
         className=""
         type="email"
-        id="email"
         name="email"
         value={formik.values.email}
         onChange={formik.handleChange}
@@ -79,7 +78,6 @@ const LoginForm = () => {
         label="Password"
         className=""
         type="password"
-        id="password"
         name="password"
         value={formik.values.password}
         onChange={formik.handleChange}
@@ -89,10 +87,9 @@ const LoginForm = () => {
         touched={formik.touched}
       />
 
-      <FormButton
-        className=""
+      <Button
+        className="login-form-btn"
         type="submit"
-        id="loginBtn"
         name="loginBtn"
         text="Sign in"
       />
