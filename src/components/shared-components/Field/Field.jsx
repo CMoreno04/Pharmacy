@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
 import "../../../styles/flex-styles.css";
-import "./form-field-styles.css";
+import "./field-styles.css";
 
-const FormField = ({
+const Field = ({
   label,
   className,
   id,
@@ -28,15 +28,15 @@ const FormField = ({
 
   return (
     <div
-      className={`form-field-container fle x-container align-center flex-column ${className}`}
+      className={`field-container flex-container flex-column ${className}`}
     >
-      <label className="form-field-label" htmlFor={name}>
+      <label className="field-label" htmlFor={name}>
         {label}
       </label>
 
       <div className="input-wrapper">
         <input
-          className={`form-field ${className}`}
+          className={`field ${className}`}
           type={isPasswordVisible ? "text" : type}
           id={id}
           name={name}
@@ -67,4 +67,4 @@ const FormField = ({
   );
 };
 
-export default FormField;
+export default Field;
