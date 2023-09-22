@@ -1,0 +1,165 @@
+.hero-section {
+    height: 80vh;
+    padding: 2rem;
+    gap: 6rem;
+
+    @media (min-width: 1301px) and (max-width: 1440px) {
+        gap: 0rem;
+        padding-left: 5rem;
+    }
+
+    @media (min-width: 1025px) and (max-width: 1300px) {
+        gap: 0rem;
+        padding-left: 5rem;
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        height: 65vh;
+        gap: 0rem;
+        padding-left: 5rem;
+    }
+
+    @media (max-width: 768px) {
+        height: 55vh;
+        gap: 0rem;
+        padding-left: 5rem;
+    }
+}
+
+.hero-content {
+    width: 36rem;
+    gap: 2rem;
+    text-align: left;
+
+    @media (min-width: 1025px) and (max-width: 1300px) {
+        width: 30rem;
+        gap: 1rem;
+    }
+
+    @media (max-width: 768px) {
+        width: 30rem;
+        gap: 1rem;
+    }
+}
+
+.hero-img {
+    width: 40rem;
+    height: 40rem;
+
+    @media (min-width: 1301px) and (max-width: 1440px) {
+        width: 36rem;
+        height: 36rem;
+    }
+
+    @media (min-width: 1025px) and (max-width: 1300px) {
+        width: 36rem;
+        height: 36rem;
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        width: 30rem;
+        height: 30rem;
+    }
+
+    @media (max-width: 768px) {
+        width: 25rem;
+        height: 25rem;
+    }
+}
+
+.hero-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #00C1AA;
+
+    @media (min-width: 1301px) and (max-width: 1440px) {
+        font-size: 3rem;
+    }
+    
+    @media (min-width: 1025px) and (max-width: 1300px) {
+        font-size: 2.5rem;
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        font-size: 2.3rem;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 2rem;
+    }
+}
+
+.hero-message {
+    font-size: 1.3rem;
+    font-weight: 400;
+    word-spacing: 0.4rem;
+    line-height: 1.8rem;
+    color: #555555;
+
+    @media (min-width: 1025px) and (max-width: 1300px) {
+        font-size: 1.1rem;
+        line-height: 1.6rem;
+    }
+
+    @media (min-width: 1301px) and (max-width: 1440px) {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        font-size: 1.1rem;
+        line-height: 1.6rem;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 1rem;
+        line-height: 1.6rem;
+    }
+}
+
+.hero-btn-container {
+    gap: 1rem;
+}
+
+.hero-btn-1 {
+    width: 10rem;
+    height: 3rem;
+    border-radius: 0%;
+}
+
+.hero-btn-2 {
+    width: 14rem;
+    height: 3rem;
+    border-radius: 0%;
+}
+
+@media (min-width: 1301px) and (max-width: 1440px) {
+    
+}
+
+@media (min-width: 1025px) and (max-width: 1300px) {
+    .hero-btn-1 {}
+
+    .hero-btn-2 {}
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-btn-1 {}
+
+    .hero-btn-2 {}
+}
+
+@media (max-width: 768px) {
+    .hero-btn-1 {
+        width: 8rem;
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+
+    .hero-btn-2 {
+        width: 12rem;
+        height: 2.5rem;
+        font-size: 1rem;
+
+    }
+}
