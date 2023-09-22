@@ -3,15 +3,15 @@ import PropTypes from "prop-types";
 
 import "./button-styles.css";
 
-const Button = ({ className, name, type, text, onClick }) => {
+const Button = ({ props }) => {
   return (
     <button
-      className={`button ${className}`}
-      name={name}
-      type={type}
-      onClick={onClick}
+      className={`button ${props.className}`}
+      name={props.name}
+      type={props.type}
+      onClick={props.onClick}
     >
-      {text}
+      {props.text}
     </button>
   );
 };
